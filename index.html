@@ -3,48 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Bootstrap Website</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Sateesh's Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+
+    <!-- PNG favicon (for browsers that support it) -->
+    <link rel="icon" href="{{ url_for('static', filename='favicon.png') }}" type="image/png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="apple-touch-icon" sizes="167x167" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='favicon.png') }}">
+
+    <!-- Other sizes for Android and Windows -->
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ url_for('static', filename='favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ url_for('static', filename='favicon.png') }}">
+
+    <style>
+        /* Import Poppins font from Google Fonts */
+/* Styles for the card layout */
+.card {
+    transition: transform 0.3s;
+    height: 100%;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+
+.card img {
+    width: 18rem;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;  /* Regular */
+}
+
+.card-title {
+    font-weight: 600;  /* Regular */
+}
+
+.card-subtitle {
+    font-weight: 200;  /* Extra-Light */
+}
+
+.card-text {
+    font-weight: 200;  /* Extra-Light */
+}
+
+        a {
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">My Website</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
+<main>
+    <div class="container text-left py-5">
+        <div class="row">
+            <div class="col pt-5">
+                <p>
+                    <span style="font-size:74px">Hi 👋 , I'm <span style="color:#FF6500">Teppala Sateesh </span></span>
+                    <sup>Data Engineer / Software Developer</sup>
+                </p>
+            </div>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <div class="jumbotron text-center">
-        <h1 class="display-4">Welcome to My Website!</h1>
-        <p class="lead">This is a simple Bootstrap template for GitHub Pages.</p>
-        <hr class="my-4">
-        <p>Explore and enjoy!</p>
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        <div class="row text-center">
+            <div class="col">
+                <p>
+                    Innovative Data Engineer with 3 years of experience, I specialize in designing and implementing
+                    robust
+                    data pipelines and warehouses. My expertise lies in ETL processes, big data technologies, and
+                    database
+                    optimization. I'm passionate about leveraging data to drive business insights and have a proven
+                    track
+                    record of improving data quality and efficiency in complex environments.
+                </p>
+            </div>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="text-center py-4">
-        <p>&copy; 2024 My Website. All Rights Reserved.</p>
-    </footer>
+    <div class="container">
+        <div class="row">
+            <div class="col py-2">
+                <div class="py-1"><p style="font-size:16px;"><b>Big Data ✅</b></p></div>
+                <p align="left">
+                    <a href="">
+                        <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Apache_Spark_logo.svg"
+                                alt="apache-spark" width="60" height="60"/>
+                    </a>
+                    <a href="">
+                        <img
+                                src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="kafka"
+                                width="60"
+                                height="60"/>
+                    </a>
+                    <a href="https://hive.apache.org/" target="_blank"
+                       rel="noreferrer"> <img
+                            src="https://www.vectorlogo.zone/logos/apache_hive/apache_hive-icon.svg" alt="hive"
+                            width="60"
+                            height="60"/> </a>
+                    <a href="https://hadoop.apache.org/" target="_blank" rel="noreferrer"> <img
+                            src="https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-icon.svg" alt="hadoop"
+                            width="60" height="60"/> </a>
+                    <a href="">
+                        <img src="https://trino.io/assets/images/trino-logo/trino-ko_tiny-alt.svg" alt="trino"
+                             width="60" height="60"/>
+                    </a>
+                </p>
+                <div class="py-1"><p style="font-size:16px;"><b>Devops ✅</b></p></div>
+                <p align="left">
+                    <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> <img
+                            src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="git" width="60"
+                            height="60"/> </a>
+                    <a href="">
+                        <img src="https://github.githubassets.com/assets/GitHub-Logo-ee398b662d42.png" alt="github"
+                             height="25"/>
+                    </a>
+                    <a href="https://travis-ci.org" target="_blank" rel="noreferrer"> <img
+                            src="https://www.vectorlogo.zone/logos/travis-ci/travis-ci-icon.svg" alt="travisci"
+                            width="60"
+                            height="60"/> </a>
+                    <a href="https://www.docker.com/" target="_blank" rel="noreferrer"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original-wordmark.svg"
+                            alt="docker" width="60" height="60"/> </a>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+                    <a href="https://kubernetes.io" target="_blank" rel="noreferrer">
+                        <img src="https://www.vectorlogo.zone/logos/kubernetes/kubernetes-icon.svg" alt="kubernetes"
+                             width="60" height="60"/> </a>
+
+                </p>
+                <div class="py-1"><p style="font-size:16px;"><b>Programming Languages ✅</b></p></div>
+                <p align="left">
+                    <a href="https://www.python.org" target="_blank"
+                       rel="noreferrer"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+                            alt="python" width="60" height="60"/> </a>
+                    <a href="https://www.scala-lang.org"
+                       target="_blank"
+                       rel="noreferrer"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/scala/scala-original.svg"
+                            alt="scala" width="60" height="60"/> </a>
+                    <a href="https://www.java.com" target="_blank" rel="noreferrer"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+                            alt="java" width="60" height="60"/> </a>
+                </p>
+                <div class="py-1"><p style="font-size:16px;"><b>Opensource Frameworks ✅</b></p></div>
+                <p align="left">
+                    <a href="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Apache_Iceberg_Logo.svg"
+                             alt="iceberg" height="35">
+                    </a>
+                    <a href="">
+                        <img src="https://delta.io/static/delta-lake-logo-a1c0d80d23c17de5f5d7224cb40f15dc.svg"
+                             alt="delta-lake" height="35">
+                    </a>
+                </p>
+            </div>
+
+            <div class="col py-2">
+                <div class="py-1"><p style="font-size:16px;"><b>Cloud/Services ✅</b></p></div>
+                <p align="left">
+                    <a href="https://aws.amazon.com" target="_blank" rel="noreferrer"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                            alt="aws" width="60" height="60"/> </a>
+                    <a href="">
+                        <img src="https://symbols.getvecta.com/stencil_9/43_aws-glue.ef66031230.svg" alt="aws-glue"
+                             width="60" height="60"/>
+                    </a>
+                    <a href="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/73/Amazon-Redshift-Logo.svg"
+                             alt="aws-redshift" width="60" height="60">
+                    </a>
+                    <a href="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Amazon_Lambda_architecture_logo.svg"
+                             alt="aws-lamda" width="60" height="60">
+                    </a>
+                    <a href="">
+                        <img src="https://www.vectorlogo.zone/logos/ibm_cloud/ibm_cloud-ar21.svg" alt="ibm-cloud"
+                             height="60">
+                    </a>
+                    <a href="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Amazon-S3-Logo.svg" alt="aws-s3"
+                             width="60" height="60">
+                    </a>
+
+                </p>
+
+                <div class="py-1"><p style="font-size:16px;"><b>Databases ✅</b></p></div>
+                <p align="left">
+                    <a href="">
+                        <img src="https://securiti.ai/wp-content/uploads/2023/07/ibm-db2-logo-16-7-en.svg" alt="ibm-db2"
+                             height="60"/>
+                    </a>
+                    <a href="https://www.mysql.com/" target="_blank"
+                       rel="noreferrer"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+                            alt="mysql" width="60" height="60"/> </a>
+                    <a href="https://www.postgresql.org"
+                       target="_blank"
+                       rel="noreferrer"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original-wordmark.svg"
+                            alt="postgresql" width="60" height="60"/> </a> <a href="https://www.sqlite.org/"
+                                                                              target="_blank"
+                                                                              rel="noreferrer"> <img
+                        src="https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" alt="sqlite" width="60"
+                        height="60"/> </a>
+                    <a href="https://www.mongodb.com/" target="_blank"
+                       rel="noreferrer"> <img
+                            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+                            alt="mongodb" width="60" height="60"/> </a>
+                    <a href="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fd/DynamoDB.png" height="60"
+                             alt="dynamodb">
+                    </a>
+                </p>
+                <div class="py-1"><p style="font-size:16px;"><b>Backend Frameworks ✅</b></p></div>
+                <p align="left">
+                    <a href=""
+                       target="_blank" rel="noreferrer"> <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Flask_logo.svg" alt="flask"
+                            height="45"/> </a>
+                    <a href="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/FastAPI_logo.svg" alt="fastapi"
+                             height="30"/>
+                    </a>
+
+                <div class="py-1"><p style="font-size:16px;"><b>BI Tools ✅</b></p></div>
+                <p align="left">
+                    <a href="">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Tableau_Software_Logo_Small.png"
+                             alt="tableau" height="35">
+                    </a>
+                    <a href="">
+                        <img src="https://camo.githubusercontent.com/f6f25227203811335bbfc181e6dded66b57cbdbeafe346c0f4e5773bae157aeb/68747470733a2f2f73757065727365742e6170616368652e6f72672f696d672f73757065727365742d6c6f676f2d686f72697a2d6170616368652e737667"
+                             alt="superset" height="50">
+                    </a>
+                    <a href="">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/2/20/Power_BI_logo.svg" alt="powerbi"
+                             height="50">
+                    </a>
+
+                </p>
+            </div>
+
+
+        </div>
+    </div>
+</main>
+
+
+<div class="container py-5">
+    <h4 align="left">Connect with me:</h4>
+    <p align="left">
+        <a href="https://linkedin.com/in/sateeshteppala" target="blank"><img align="center"
+                                                                             src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"
+                                                                             alt="sateeshteppala" height="30"
+                                                                             width="40"/></a>
+    </p>
+    <h4 align="left" class="py-3">More about me:</h4>
+    <p align="left">
+        - 📝 I regularly write articles on <a href="https://medium.com/@sateeshpy" target="_blank">
+        https://medium.com/@sateeshpy</a><br><BR>
+        - 👨‍💻 All of my projects are available at <a href="https://github.com/sateesh-py" target="_blank">
+        https://github.com/sateesh-py</a> & <a href="https://github.com/SateehTeppala">https://github.com/SateehTeppala</a>
+        <br><br>
+        - 🔭 I’m currently working on <b>Data Pipelines using AWS</b><br><BR>
+
+        - 🌱 I’m currently learning <b>AWS Glue, Redshift, Kafka</b><BR><BR>
+
+        - 👯 I’m looking to collaborate on <b>Big Data projects</b><BR><BR>
+    </p>
+</div>
+
+
+<span class="mb-4">
+</span>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
